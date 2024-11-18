@@ -6,6 +6,10 @@ import QuestionImage from './Components/questionComponent/QuestionComponent';
 // import Dashboard from './Components/DashComponents/DashboardComponent';
 import LoginPage from './Components/authComponents/LoginComponents';
 import SignupPage from './Components/authComponents/SignupComponents';
+import Dashboard from './Components/Dashboard/Dashboard';
+import GameHistory from './Components/historyComponents/History';
+import Leaderboard from './Components/leaderboardComponents/leaderboard';
+
 
 function App() {
   return (
@@ -15,6 +19,7 @@ function App() {
       <Sidebar />
       <Dashboard />
     </div> */}
+    
 
     <Router>
 
@@ -22,7 +27,12 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
 
+
         <Route path="/question" element={<QuestionImage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/history" element={<GameHistory />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+
 
 
       </Routes>
