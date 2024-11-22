@@ -9,6 +9,7 @@ import SignupPage from './Components/authComponents/SignupComponents';
 import Dashboard from './Components/Dashboard/Dashboard';
 import GameHistory from './Components/historyComponents/History';
 import Leaderboard from './Components/leaderboardComponents/leaderboard';
+// import ProtectedRoute from './protectedRoutes/protectedRoutes';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
         <Route path="/question" element={<QuestionImage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
         <Route path="/history" element={<GameHistory />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
 

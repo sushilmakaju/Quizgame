@@ -68,7 +68,7 @@ const Dashboard = () => {
               bgClass: "from-green-400 to-green-600 hover:from-green-500 hover:to-green-700" 
             },
             { 
-              label: "Highscores", 
+              label: "History", 
               icon: FaTrophy, 
               onClick: handleHighscore, 
               bgClass: "from-pink-400 to-pink-600 hover:from-pink-500 hover:to-pink-700" 
