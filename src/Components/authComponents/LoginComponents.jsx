@@ -46,13 +46,10 @@ const LoginPage = () => {
 
         const { token} = response.data; // Ensure you have user_role from response
         localStorage.setItem("token", token);
-        
-
-        // dispatch(login({ token })); // Dispatch the token
-
+      
         toast.success("Login successful");
 
-        // Redirect to different dashboards based on the role
+        
         setTimeout(() => {
           navigate("/dashboard")
 

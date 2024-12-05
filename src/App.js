@@ -31,7 +31,7 @@ function App() {
 
         <Route path="/question" element={<QuestionImage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
+       
         <Route path="/history" element={<GameHistory />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
 

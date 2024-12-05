@@ -62,12 +62,12 @@ const GameHistory = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-yellow-100 via-yellow-50 to-yellow-200 min-h-screen p-6 flex justify-center items-center">
-      <div className="max-w-4xl w-full bg-white shadow-2xl rounded-2xl overflow-hidden">
+    <div className="bg-yellow-50 min-h-screen p-6 flex justify-center items-center">
+      <div className="max-w-4xl w-full bg-white shadow-md rounded-lg overflow-hidden">
         <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <FaHistory className="mr-2 text-2xl" />
-            <h1 className="text-2xl font-bold">Game History</h1>
+            <FaHistory className="mr-3 text-2xl" />
+            <h1 className="text-xl font-semibold">Game History</h1>
           </div>
           <button
             onClick={fetchGameHistory}
@@ -78,24 +78,24 @@ const GameHistory = () => {
         </div>
 
         {error && (
-          <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 my-4 mx-6 rounded-md">
+          <div className="bg-red-50 border-l-4 border-red-400 text-red-600 p-4 my-4 mx-6 rounded-md">
             <p>{error}</p>
           </div>
         )}
 
         {loading ? (
           <div className="p-6 text-center">
-            <p className="text-gray-600 text-lg">Loading game history...</p>
+            <p className="text-gray-500 text-lg">Loading game history...</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="min-w-full text-left text-sm">
+            <table className="min-w-full border-collapse">
               <thead>
-                <tr className="bg-yellow-300 text-yellow-900 text-sm">
-                  <th className="py-3 px-6 font-medium">Date</th>
-                  <th className="py-3 px-6 font-medium">Total Questions</th>
-                  <th className="py-3 px-6 font-medium">Score</th>
-                  <th className="py-3 px-6 font-medium">Remarks</th>
+                <tr className="bg-yellow-200 text-yellow-800">
+                  <th className="py-3 px-6 text-left text-sm font-semibold border-b border-yellow-300">Date</th>
+                  <th className="py-3 px-6 text-left text-sm font-semibold border-b border-yellow-300">Total Questions</th>
+                  <th className="py-3 px-6 text-left text-sm font-semibold border-b border-yellow-300">Score</th>
+                  <th className="py-3 px-6 text-left text-sm font-semibold border-b border-yellow-300">Remarks</th>
                 </tr>
               </thead>
               <tbody>
@@ -107,16 +107,16 @@ const GameHistory = () => {
                         index % 2 === 0 ? 'bg-yellow-50' : 'bg-yellow-100'
                       } hover:bg-yellow-200 transition duration-200`}
                     >
-                      <td className="py-4 px-6 border-b border-gray-200 text-gray-700">
+                      <td className="py-4 px-6 border-b border-yellow-300 text-gray-700">
                         {formatDate(item.gamedate)}
                       </td>
-                      <td className="py-4 px-6 border-b border-gray-200 text-gray-700">
+                      <td className="py-4 px-6 border-b border-yellow-300 text-gray-700">
                         {item.total_questions}
                       </td>
-                      <td className="py-4 px-6 border-b border-gray-200 text-gray-700">
+                      <td className="py-4 px-6 border-b border-yellow-300 text-gray-700">
                         {item.score}
                       </td>
-                      <td className="py-4 px-6 border-b border-gray-200 text-gray-700">
+                      <td className="py-4 px-6 border-b border-yellow-300 text-gray-700">
                         {item.remarks}
                       </td>
                     </tr>

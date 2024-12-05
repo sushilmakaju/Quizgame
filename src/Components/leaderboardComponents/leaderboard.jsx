@@ -71,7 +71,7 @@ const Leaderboard = () => {
     <main className="p-6">
       <div className="mb-6 text-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 py-6 rounded shadow-lg">
         <h1 className="text-4xl font-bold text-white">🎮 Leaderboard 🎮</h1>
-        <p className="mt-2 text-lg text-gray-200">👏 Today's Top Players 👏</p>
+        <p className="mt-2 text-lg text-gray-200">👏 Top Players 👏</p>
       </div>
 
       <div className="w-full bg-white p-6 shadow-md rounded-lg h-[80vh] overflow-auto">
